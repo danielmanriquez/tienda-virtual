@@ -19,11 +19,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "cliente")
 public class Cliente  extends EntidadAbstracta{
     
-    @Column(name = "primer_nombre")
-    private String primerNombre;
+    @Column(name = "nombre")
+    private String nombre;
     
-    @Column(name = "segundo_nombre")
-    private String segundoNombre;
+    @Column(name = "apellido")
+    private String apellido;
     
     @Column(name = "email")
     private String email;
@@ -31,8 +31,12 @@ public class Cliente  extends EntidadAbstracta{
     @Column(name="telefono")
     private String telefono;
     
+    @Column(name = "activo")
+    private Boolean activo ;
+    
     @OneToMany(mappedBy="cliente")
     @JsonIgnore
     private Set<Carro> carros;
+
     
 }

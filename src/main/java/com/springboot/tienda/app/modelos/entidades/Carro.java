@@ -34,13 +34,13 @@ public class Carro extends EntidadAbstracta implements Serializable {
     
     @NotNull // Valida que la entrada no sea null .
     @Enumerated(EnumType.STRING)
-    private EstadoCarro estado ;
+    private EstadoCarro estadoCarro ;
     
     
     public Carro (Cliente cliente) {
     
         this.cliente = cliente ;
-        this.estado = EstadoCarro.NUEVO ;
+        this.estadoCarro = EstadoCarro.NUEVO ;
         
     }
     

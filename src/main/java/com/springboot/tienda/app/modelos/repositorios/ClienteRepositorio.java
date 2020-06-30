@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClienteRepositorio extends JpaRepository<Cliente , Long> {
     
-    List<Cliente> findAllByEnabled(Boolean enabled);
+    List<Cliente> findAllByActivo(Boolean activo);
     
 }

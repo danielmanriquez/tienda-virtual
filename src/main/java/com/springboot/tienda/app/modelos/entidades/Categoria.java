@@ -26,7 +26,7 @@ public class Categoria extends EntidadAbstracta{
     private String nombre ;
     
     @NotNull
-    @Column(name = "nombre" , nullable= false)
+    @Column(name = "descripcion" , nullable= false)
     private String descripcion ;
     
     @OneToMany(mappedBy="categoria")

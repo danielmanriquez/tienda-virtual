@@ -29,7 +29,7 @@ public interface CarroRepositorio extends JpaRepository <Carro , Long>{
      * @param idCliente
      * @return lista de carros
      */
-    List<Carro> findByEstadoCarroAndIdCliente(EstadoCarro estadoCarro , Long idCliente);
+    List<Carro> findByEstadoCarroAndClienteId(EstadoCarro estadoCarro , Long idCliente);
      
      
 }

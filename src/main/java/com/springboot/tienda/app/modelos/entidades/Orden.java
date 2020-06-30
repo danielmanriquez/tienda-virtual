@@ -34,7 +34,7 @@ public class Orden extends EntidadAbstracta {
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "estado_carro" , nullable = false)
-    private EstadoCarro estadoCarro ;
+    private EstadoOrden estadoOrden ;
     
     @Column(name ="enviada")
     private ZonedDateTime enviada ;
@@ -50,7 +50,7 @@ public class Orden extends EntidadAbstracta {
     @JsonIgnore
     private Set<ItemOrden> itemsOrden;
     
-    @OneToMany(mappedBy = "orden")
+    @OneToOne(mappedBy = "orden")
     @JsonIgnore
     private Carro carro ;
     
